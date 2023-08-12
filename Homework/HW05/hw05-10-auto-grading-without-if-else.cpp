@@ -27,3 +27,62 @@
     Output:
         F !
 */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int score;
+    
+    cout << "enter score :" << endl;
+    cin >> score;
+    
+    char grade;
+
+    switch (score / 5) {
+        case 16:
+        case 15:
+        case 14:
+        case 13:
+        case 12:
+        case 11:
+        case 10:
+        case 9:
+        case 8:
+        case 7:
+            grade = 'A';
+            break;
+        case 6:
+            grade = 'B';
+            break;
+        case 5:
+            grade = 'C';
+            break;
+        case 4:
+            grade = 'D';
+            break;
+        default:
+            grade = 'F';
+            break;
+    }
+
+    switch (grade) {
+        case 'A':
+            cout << "A !";
+            break;
+        case 'B':
+            cout << "B !";
+            break;
+        case 'C':
+            cout << "C !";
+            break;
+        case 'D':
+            cout << "D !";
+            break;
+        case 'F':
+            cout << "F !";
+            break;
+    }
+    
+    return 0;
+}
