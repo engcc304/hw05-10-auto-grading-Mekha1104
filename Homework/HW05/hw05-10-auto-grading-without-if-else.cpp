@@ -28,61 +28,47 @@
         F !
 */
 
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 int main() {
     int score;
-    
-    cout << "enter score :" << endl;
-    cin >> score;
-    
-    char grade;
+    printf("enter score:\n");
+    scanf("%d", &score);
 
     switch (score / 5) {
-        case 16:
-        case 15:
-        case 14:
-        case 13:
-        case 12:
-        case 11:
-        case 10:
-        case 9:
-        case 8:
-        case 7:
-            grade = 'A';
-            break;
-        case 6:
-            grade = 'B';
-            break;
-        case 5:
-            grade = 'C';
-            break;
+        case 1:
+        case 2:
+        case 3:
         case 4:
-            grade = 'D';
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            printf("F !\n");
+            break;
+        case 10:
+            printf("D !\n");
+            break;
+        case 11:
+            printf("D+ !\n");
+            break;
+        case 12:
+            printf("C !\n");
+            break;
+        case 13:
+            printf("C+ !\n");
+            break;
+        case 14:
+            printf("B !\n");
+            break;
+        case 15:
+            printf("B+ !\n");
             break;
         default:
-            grade = 'F';
+            printf("A !\n");
             break;
     }
 
-    switch (grade) {
-        case 'A':
-            cout << "A !";
-            break;
-        case 'B':
-            cout << "B !";
-            break;
-        case 'C':
-            cout << "C !";
-            break;
-        case 'D':
-            cout << "D !";
-            break;
-        case 'F':
-            cout << "F !";
-            break;
-    }
-    
     return 0;
 }
